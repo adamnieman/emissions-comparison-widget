@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <title>carbon visualisation widget</title>
+    <link href="styling.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="libs/jszip.js"></script>
+    <script type="text/javascript" src="libs/three.js"></script>
+    <script type="text/javascript" src="libs/ColladaLoader.js"></script>
+    <script type="text/javascript" src="libs/terrainloader.js"></script>
+    <script type="text/javascript" src="inputhandler2.js"></script>
+    <script type="text/javascript" src="utility.js"></script>
+    <script type="text/javascript" src="modules/setupPage.js"></script>
+    <script type="text/javascript" src="modules/loadColladaModels.js"></script>
+    <script type="text/javascript" src="modules/setupThreeScene.js"></script>
+    <script type="text/javascript" src="modules/render.js"></script>
+    <script type="text/javascript" src="modules/captureMouseMove.js"></script>
+    <script type="text/javascript" src="modules/gatherInput.js"></script>
+    <script type="text/javascript" src="modules/createVolumes.js"></script>
+    <script type="text/javascript" src="modules/pageResize.js"></script>
+    <script type="text/javascript" src="modules/changeValuesForTimescale.js"></script>
+    <script type="text/javascript" src="modules/updateCameraPosition.js"></script>
+    <script type="text/javascript" src="modules/handleScalingObjects.js"></script>
+    <script type="text/javascript" src="modules/createEverest.js"></script>
+    <script type="text/javascript" src="modules/switchScalingObjects.js"></script>
+    <script type="text/javascript" src="modules/makeZipFile.js"></script>
+    <script type="text/javascript" src="modules/outputStats.js"></script>
+    <script type="text/javascript" src="core.js"></script>
+	</head>
+<body>
+	<div id = "volContainer"></div>
+	<div id = "infoContainer">
+		<div id = "controls">
+	
+		    <form>
+		    	<p>
+				gas:
+				<select id="Gas">
+					  <option value="1.98">carbon dioxide</option>
+					  <option value="1.14">carbon monoxide</option>
+					  <option value="1000">water</option>
+				</select> 
+				</p>
+				<p>
+				# of masses:
+				<select autocomplete="off" id = "MassNum" onchange = "changeHandler(value)">
+				  <option value="1" selected="selected">1</option>
+				  <option value="2">2</option>
+				</select> 
+				</p>
+				<div id = "Mass1Div" class = "MassInput">
+					Mass 1: 
+					<input type="text" id="Mass1">
+					<select id="Mass1Unit">
+					  <option value="kg">kg</option>
+					  <option value="t">tonnes</option>
+					  <option value="gt">gigatonnes</option>
+					</select> 
+					<select id="Mass1Per">
+					  <option value="false">no time period</option>
+					  <option value="year">per year</option>
+					  <option value="day">per day</option>
+					  <option value="min">per minute</option>
+					  <option value="sec">per second</option>
+					</select> 
+					</br>
+				</div>
+				<div id = "Mass2Div" class = "MassInput" display = "none">
+					Mass 2: 
+					<input type="text" id="Mass2">
+					<select id="Mass2Unit">
+					  <option value="kg">kg</option>
+					  <option value="t">tonnes</option>
+					  <option value="gt">gigatonnes</option>
+					</select> 
+					<select id="Mass2Per">
+					  <option value="false">no time period</option>
+					  <option value="year">per year</option>
+					  <option value="day">per day</option>
+					  <option value="min">per minute</option>
+					  <option value="sec">per second</option>
+					</select> 
+					</br>
+				</div>
+		    </form>
+		    <p><button id = "submit" class = "inactive">submit</button></p>
+		    <p class = "bottom">
+		    <button id = "scale" class = "active">scaling obj</button>
+		    </p>
+		</div>
+		
+		<div id = "buttonContainer">
+			<button id = "sec" class = "timescale inactive">per second</button>
+			<button id = "min" class = "timescale inactive">per minute</button>
+			<button id = "day" class = "timescale inactive">per day</button>
+			<button id = "year" class = "timescale inactive">per year</button>
+		</div>
+		<div id = "stats">
+			
+			<div id = "stats1" class = "stats">
+			</div>
+			<div id = "stats2" class = "stats">
+			</div>
+			<div id = "universalStats"></div>
+			<p id = "downloadZip"></p>
+			<p id = "test2"></p>
+		</div>
+	</div>
+	
+	
+	
+
+</body>
+</html>
