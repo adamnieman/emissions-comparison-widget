@@ -16,32 +16,32 @@ function loadColladaModels (sb) {
 		var loader4 = new THREE.ColladaLoader();
 		var loader5 = new THREE.ColladaLoader();
 		
-			loader1.load("teacup.dae", function
+			loader1.load("assets/3d/teacup.dae", function
 			(result) {
 				var teacup = result.scene.children[0].children[0].clone();
 				teacup.rotation.x = -Math.PI/2
 				teacup.rotation.z = Math.PI/4
 				objArray.push(teacup)
 				
-				loader2.load("human.dae", function
+				loader2.load("assets/3d/human.dae", function
 				(result) {
 					var human = result.scene.children[0].children[0].clone();
 					human.rotation.x = -Math.PI/2
 					objArray.push(human)
 					
-					loader3.load("liberty.dae", function
+					loader3.load("assets/3d/liberty.dae", function
 					(result) {
 						var liberty = result.scene.children[0].children[0].clone();
 						liberty.rotation.x = -Math.PI/2
 						objArray.push(liberty)
 						
-						loader4.load("eiffel.dae", function
+						loader4.load("assets/3d/eiffel.dae", function
 						(result) {
 							var eiffel = result.scene.children[0].children[0].clone();
 							eiffel.rotation.x = -Math.PI/2
 							objArray.push(eiffel)
 							
-							loader5.load("burj.dae", function
+							loader5.load("assets/3d/burj.dae", function
 							(result) {
 								var burj = result.scene.children[0].children[0].clone();
 								burj.rotation.x = -Math.PI/2
