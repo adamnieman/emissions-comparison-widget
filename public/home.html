@@ -22,7 +22,7 @@
             <div id="controls">
         
                 <form>
-                    <p>
+                    <p class=formRow>
                         <label for=Gas>gas:</label>
                         <select id=Gas>
                             <option value="1.98">carbon dioxide</option>
@@ -30,9 +30,9 @@
                             <option value="1000">water</option>
                         </select>
                     </p>
-                    <p>
+                    <p class=formRow>
                         <label for=MassNum># of masses:</label>
-                        <select autocomplete="off" id="MassNum" onchange="changeHandler(value)">
+                        <select id="MassNum" onchange="changeHandler(value)">
                             <option value="1" selected="selected">1</option>
                             <option value="2">2</option>
                         </select> 
@@ -89,7 +89,6 @@
                 <div id="stats2" class="stats"></div>
                 <div id="universalStats"></div>
                 <p id="downloadZip"></p>
-                <p id="test2"></p>
             </div>
         </div>
     </div>

@@ -43,10 +43,6 @@ var core = function (sandBox) {
 	}
 }
 
-//sandbox here
-
-
-
 function init () {
 	
 	var sandBox = {

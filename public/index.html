@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Emissions Comparison Widget</title>
+    
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+        
+        #ecw-container {
+            display: inline-block;
+            width: 100%; 
+        }
+    </style>
+
+    <link rel="stylesheet" href="/emissions-comparison-widget.min.css">
+
+</head>
+<body>
+    
+    <h1>This is a test web page</h1>
+
+    <p>This page is an example of how to embed the Emissions Comparison Widget within any site. The required CSS file has been included in the head of the page and the JavaScript at the bottom of the body with a short snippet to initialise the widget inside the container with the ID &quot;ecw-container&quot;.</p>
+
+    <h2>Comparison Widget</h2>
+
+    <div id=ecw-container></div>
+
+    <h2>Another section</h2>
+
+    <p>This is another block of text that will appear further down the page. The widget will appear above this block of text. Here is some Lorem ipsum: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quia rem facere reiciendis dignissimos adipisci aperiam enim aliquid eum, in. Nihil quis impedit cupiditate a nulla iusto reiciendis. Nam, dolore!</p>
+
+    <script src="/emissions-comparison-widget.min.js"></script>
+    <script>
+        emissionsComparisonWidget = new EmissionsComparisonWidget({
+            container: 'ecw-container'
+        });
+    </script>
+
+</body>
+</html>
