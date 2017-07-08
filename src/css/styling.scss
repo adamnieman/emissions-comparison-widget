@@ -1,92 +1,115 @@
 
-h2 {
-	font-size: 16px;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0 0 10px 0;
-}
+.cw-container {
 
-form {
-	width: 400px;
-	padding: none;
-	margin: none;
-}
-p {
-	padding: none; 
-	margin: 0 0 10px 0;
-	clear: both;
-}
-p.bottom {
-	margin: 0;
-}
+    h2 {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+    }
 
-button{
-	width: 75px;
-    height: 20px;
-    border: none;
-    border-radius: 5px;
-    margin: 0px 7px 0px 0px;
-}
-select, input {
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-   border-radius: 0px;
-   border: 2px solid #eeeeee;
-}
-a {
-	text-decoration: none;
-	color: #f2781f;
-}
+    form {
+        display: block;
+        width: 400px;
+        padding: 0;
+        margin: 0;
+    }
 
-div {
-	float: left;
-	clear: left;
-}
+    p {
+        padding: none; 
+        margin: 0 0 10px 0;
+        clear: both;
+    }
 
-#controls {
-	border: 2px solid #eeeeee;
-	width: 400px;
-	padding: 5px;
-	margin: 0 0 10px 0;
-}
+    p.bottom {
+        margin: 0;
+    }
 
-.MassInput {
-	padding: none; 
-	margin: 0 0 10px 0;
-}
-.active, #submit:active {
-	background-color: #f2781f;
-    color: #ffffff;
-}
-.inactive{
-	background-color: #eeeeee;
-    color: #000000;
-}
-.stats {
-	border: 2px solid #eeeeee;
-	padding: 5px 5px 0 5px;
-	clear: none;
-	width: 187px;
-	margin-bottom: 10px;
-	
-}
-.stats p {
-	margin-bottom: 5px;
-}
-#stats1 {
-	margin-right: 10px;
-}
-#stats {
-	width: 420px;
-}
+    button {
+        width: 75px;
+        border: none;
+        border-radius: 5px;
+        margin: 0px 7px 0px 0px;
+        padding: 4px;
+    }
 
-#buttonContainer {
-	margin: 0 0 10px 0;
-}
+    button:not(.active):hover {
+        cursor: pointer;
+        background-color: #ddd;
+    }
 
-#infoContainer{
-	
-	clear: right;
-	margin-left: 10px;
+    select, input {
+       border-radius: 0;
+       border: 2px solid #eeeeee;
+    }
+
+    a {
+        text-decoration: none;
+        color: #f2781f;
+    }
+
+    div {
+        float: left;
+        clear: left;
+    }
+
+    #controls {
+        border: 2px solid #eeeeee;
+        width: 400px;
+        padding: 5px;
+        margin: 0 0 10px 0;
+    }
+
+    .MassInput {
+        padding: none; 
+        margin: 0 0 10px 0;
+    }
+    
+    .active, #submit:active {
+        background-color: #f2781f;
+        color: #ffffff;
+    }
+
+    .inactive {
+        background-color: #eeeeee;
+        color: #000000;
+    }
+
+    .stats {
+        border: 2px solid #eeeeee;
+        padding: 5px 5px 0 5px;
+        clear: none;
+        width: 187px;
+        margin-bottom: 10px;
+        
+        .stats p {
+            margin-bottom: 5px;
+        }
+    }
+
+    #stats {
+
+        width: 420px;
+
+        #stats1 {
+            margin-right: 10px;
+        }
+
+    }
+
+    #buttonContainer {
+        display: flex;
+        margin: 0 0 10px 0;
+        width: 100%;
+
+        button {
+            flex-grow: 1; 
+        }
+    }
+
+    #infoContainer {
+        clear: right;
+        margin-left: 10px;
+    }
+
 }
