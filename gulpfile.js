@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css');
 
+var filename = 'emissions-comparison-widget';
+
 var paths = {
     sass: [
         './src/css/styling.scss'
@@ -39,14 +41,14 @@ var paths = {
 gulp.task('sass', function () {
     return gulp.src(paths.sass)
         .pipe(sass().on('error', sass.logError))
-        .pipe(concat('compare-widget.min.css')) 
+        .pipe(concat(filename+'.min.css')) 
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('./public'));
 });
 
 gulp.task('scripts', function() {
     return gulp.src( paths.scripts )
-        .pipe(concat('compare-widget.min.js'))
+        .pipe(concat(filename+'.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./public/'));
 });
