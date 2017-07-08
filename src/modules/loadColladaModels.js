@@ -58,7 +58,7 @@ function loadColladaModels (sb) {
 										objArray[v].receiveShadow = true;
 	        							objArray[v].castShadow = true;
 									}
-									var texture = THREE.ImageUtils.loadTexture("svgmapbiggest.svg", {}, function() {
+									var texture = THREE.ImageUtils.loadTexture("/assets/svgmapbiggest.svg", {}, function() {
 		    							
 		    							sb.models = {colladaModels: {
 																		teacup: teacup,

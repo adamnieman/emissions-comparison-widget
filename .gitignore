@@ -1,4 +1,5 @@
 
+node_modules/*
 
 # Ignore OS generated temp files
 .DS_Store

@@ -1,14 +1,11 @@
-body {
-	overflow: hidden;
-    font-family: sans-serif;
-    font-size: 12px;
-}
+
 h2 {
 	font-size: 16px;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 0 0 10px 0;
 }
+
 form {
 	width: 400px;
 	padding: none;
@@ -22,6 +19,7 @@ p {
 p.bottom {
 	margin: 0;
 }
+
 button{
 	width: 75px;
     height: 20px;
@@ -40,10 +38,12 @@ a {
 	text-decoration: none;
 	color: #f2781f;
 }
+
 div {
 	float: left;
 	clear: left;
 }
+
 #controls {
 	border: 2px solid #eeeeee;
 	width: 400px;
@@ -80,6 +80,7 @@ div {
 #stats {
 	width: 420px;
 }
+
 #buttonContainer {
 	margin: 0 0 10px 0;
 }
