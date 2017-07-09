@@ -134,7 +134,8 @@ var interfaceNodes = [
                                 inputType: 'number',
                                 id: 'Mass1',
                                 className: 'ecw-mass-number-input',
-                                min: 1
+                                min: 1,
+                                required: true
                             },
                             {
                                 type: 'select',
@@ -164,7 +165,8 @@ var interfaceNodes = [
                                 inputType: 'number',
                                 id: 'Mass2',
                                 className: 'ecw-mass-number-input',
-                                min: 1
+                                min: 1,
+                                required: true
                             },
                             {
                                 type: 'select',

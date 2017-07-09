@@ -45,6 +45,10 @@
        border: 2px solid #eee;
     }
 
+    input:invalid {
+        border-color: #c15c5c;
+    }
+
     .ecw-mass-number-input {
         width: 70px;
     }

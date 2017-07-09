@@ -36,22 +36,22 @@ function onOffSet (button, className){
 	
 }
 
-function changeHandler (value){
-		var massNum = parseFloat(value)
-	
-		var allMassInputs = document.getElementsByClassName("MassInput")
-		
-		for (var i = 0; i < allMassInputs.length; i++){
-			var element = allMassInputs[i];
-			element.style.display = "none";
-			document.getElementById("Mass"+(i+1)).value = ""
-		}
-		
-		for (var i = 1; i < massNum + 1; i++){
-			var id = "Mass"+i+"Div";
-			var element = document.getElementById(id)
-			element.style.display = "block"
-		}
+/**
+ * @param number value 
+ */
+function setNumberOfComparisonObjects( value ){
+    
+    var massNum = parseInt(value);
+    
+    var allMassInputs = document.getElementsByClassName("MassInput");
+
+    // Reset the values
+    if ( massNum == 1 ){
+        document.getElementById("Mass2Div").style.display = 'none';
+        document.getElementById("Mass2").value = '';
+    } else if( massNum == 2 ){
+        document.getElementById("Mass2Div").style.display = 'block';
+    }
 
 }
 
@@ -80,7 +80,7 @@ EmissionsComparisonWidget.prototype.initInterface = function( config ){
     nodeToElem( this.container, interfaceNodes );
 
     document.getElementById('MassNum').addEventListener('change', function(){
-        changeHandler( this.value );
+        setNumberOfComparisonObjects( this.value );
     });
 
 };
@@ -117,6 +117,9 @@ function nodeToElem( parent, node ){
         }
         if( node.display === false ){
             thisElem.style.display = 'none';
+        }
+        if( node.required ){
+            thisElem.setAttribute('required', true);
         }
         if( node.for ){
             thisElem.setAttribute('for', node.for);

@@ -9,7 +9,6 @@ function setupPage(sb) {
 		document.getElementById("universalStats").style.display = "none"
 		document.getElementById("stats1").style.display = "none"
 		document.getElementById("stats2").style.display = "none"
-		changeHandler(1)
 		
 		var mainContainer = document.getElementById("volContainer");
 		 if (!window.WebGLRenderingContext) {
