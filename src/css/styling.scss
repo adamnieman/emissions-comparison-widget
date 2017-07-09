@@ -25,16 +25,10 @@
         clear: both;
     }
 
-    p.bottom {
-        margin: 0;
-    }
-
     button {
-        width: 75px;
         border: none;
         border-radius: 5px;
-        margin: 0px 7px 0px 0px;
-        padding: 4px;
+        padding: 5px 15px;
     }
 
     button:not(.active):hover {
@@ -62,11 +56,16 @@
         margin-bottom: 10px;
     }
 
-    #controls {
+    .ecw-controls {
+        float: left;
         border: 2px solid #eee;
         width: 100%;
-        padding: 5px;
+        padding: 5px 5px 0 5px;
         margin: 0 0 10px 0;
+    }
+
+    #submit {
+        float: right;
     }
     
     .active, #submit:active {
@@ -97,13 +96,11 @@
     }
 
     #buttonContainer {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 5px;
         margin: 0 0 10px 0;
         width: 100%;
-
-        button {
-            flex-grow: 1; 
-        }
     }
 
 }

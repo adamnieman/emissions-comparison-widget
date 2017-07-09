@@ -6,8 +6,8 @@ function switchScalingObjects (sb) {
 	
 	function INIT () {
 		
-		var button = document.getElementById("scale")
-		
+        var button = document.getElementById("ecw-btn-scale");
+
 		sb.listen({
 			listenFor: ["finished-setup"],
 			moduleID: this.moduleID,
@@ -30,13 +30,19 @@ function switchScalingObjects (sb) {
 	}
 	
 	function addOrRemove () {
+
 		if (group && scene) {
+
+            var button = document.getElementById("ecw-btn-scale");
+
 			if (addRemove === true){
 				scene.remove(group)
-			}
-			else {
-				scene.add(group)
-				
+                button.classList.remove('active');
+                button.classList.add('inactive');
+            } else {
+                scene.add(group);
+                button.classList.remove('inactive');
+                button.classList.add('active');
 			}
 			addRemove = !addRemove
 		}

@@ -19,63 +19,64 @@
     <div class="ecw-container">
         <div id="volContainer"></div>
         <div id="infoContainer">
-            <div id="controls">
-        
-                <form>
-                    <div class=ecw-form-row>
-                        <label for=Gas>Gas:</label>
-                        <select id=Gas>
-                            <option value="1.98">carbon dioxide</option>
-                            <option value="1.14">carbon monoxide</option>
-                            <option value="1000">water</option>
-                        </select>
-                    </div>
-                    <div class=ecw-form-row>
-                        <label for=MassNum>Number of masses to compare:</label>
-                        <select id="MassNum" onchange="changeHandler(value)">
-                            <option value="1" selected="selected">1</option>
-                            <option value="2">2</option>
-                        </select> 
-                    </div>
-                    <div id="Mass1Div" class=ecw-form-row>
-                        <label for=Mass1>Mass 1:</label>
-                        <input type="number" id="Mass1" class="ecw-mass-number-input" min="1">
-                        <select id="Mass1Unit">
-                            <option value="kg">kg</option>
-                            <option value="t">tonnes</option>
-                            <option value="gt">gigatonnes</option>
-                        </select> 
-                        <select id="Mass1Per">
-                            <option value="false">no time period</option>
-                            <option value="year">per year</option>
-                            <option value="day">per day</option>
-                            <option value="min">per minute</option>
-                            <option value="sec">per second</option>
-                        </select> 
-                        </br>
-                    </div>
-                    <div id="Mass2Div" class=ecw-form-row style="display: none">
-                        <label for=Mass2>Mass 2:</label>
-                        <input type="number" id="Mass2" class="ecw-mass-number-input" min="1">
-                        <select id="Mass2Unit"> 
-                            <option value="kg">kg</option>
-                            <option value="t">tonnes</option>
-                            <option value="gt">gigatonnes</option>
-                        </select> 
-                        <select id="Mass2Per">
-                            <option value="false">no time period</option>
-                            <option value="year">per year</option>
-                            <option value="day">per day</option>
-                            <option value="min">per minute</option>
-                            <option value="sec">per second</option>
-                        </select> 
-                        </br>
-                    </div>
-                </form>
-                <p><button id="submit" class="inactive">Submit</button></p>
-                <p class="bottom">
-                    <button id="scale" class="active">scaling obj</button>
-                </p>
+            <form class="ecw-controls">
+                <h2>Comparison data input</h2>
+                <div class=ecw-form-row>
+                    <label for=Gas>Gas:</label>
+                    <select id=Gas>
+                        <option value="1.98">Carbon dioxide</option>
+                        <option value="1.14">Carbon monoxide</option>
+                        <option value="1000">Water</option>
+                    </select>
+                </div>
+                <div class=ecw-form-row>
+                    <label for=MassNum>Number of masses to compare:</label>
+                    <select id="MassNum" onchange="changeHandler(value)">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                    </select> 
+                </div>
+                <div id="Mass1Div" class=ecw-form-row>
+                    <label for=Mass1>Mass 1:</label>
+                    <input type="number" id="Mass1" class="ecw-mass-number-input" min="1">
+                    <select id="Mass1Unit">
+                        <option value="kg">kg</option>
+                        <option value="t">tonnes</option>
+                        <option value="gt">gigatonnes</option>
+                    </select> 
+                    <select id="Mass1Per">
+                        <option value="false">no time period</option>
+                        <option value="year">per year</option>
+                        <option value="day">per day</option>
+                        <option value="min">per minute</option>
+                        <option value="sec">per second</option>
+                    </select> 
+                    </br>
+                </div>
+                <div id="Mass2Div" class=ecw-form-row style="display: none">
+                    <label for=Mass2>Mass 2:</label>
+                    <input type="number" id="Mass2" class="ecw-mass-number-input" min="1">
+                    <select id="Mass2Unit"> 
+                        <option value="kg">kg</option>
+                        <option value="t">tonnes</option>
+                        <option value="gt">gigatonnes</option>
+                    </select> 
+                    <select id="Mass2Per">
+                        <option value="false">no time period</option>
+                        <option value="year">per year</option>
+                        <option value="day">per day</option>
+                        <option value="min">per minute</option>
+                        <option value="sec">per second</option>
+                    </select> 
+                    </br>
+                </div>
+                <div class=ecw-form-row>
+                    <button id=submit type=button class=inactive>Submit</button>
+                </div>
+            </form>
+
+            <div class=ecw-form-row>
+                <button id=ecw-btn-scale type=button class=active>Include scaling object</button>
             </div>
             
             <div id="buttonContainer">
@@ -88,7 +89,7 @@
                 <div id="stats1" class="ecw-stat-box"></div>
                 <div id="stats2" class="ecw-stat-box"></div>
             </div>
-            <div id="universalStats"></div>
+            <div id=universalStats class=ecw-stat-box></div>
             <p id="downloadZip"></p>
         </div>
     </div>
