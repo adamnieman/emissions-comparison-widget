@@ -31,14 +31,14 @@
                 </div>
                 <div class=ecw-form-row>
                     <label for=MassNum>Number of masses to compare:</label>
-                    <select id="MassNum" onchange="changeHandler(value)">
+                    <select id="MassNum" onchange="setNumberOfComparisonObjects(value)">
                         <option value="1" selected="selected">1</option>
                         <option value="2">2</option>
                     </select> 
                 </div>
                 <div id="Mass1Div" class=ecw-form-row>
                     <label for=Mass1>Mass 1:</label>
-                    <input type="number" id="Mass1" class="ecw-mass-number-input" min="1">
+                    <input type="number" id="Mass1" class="ecw-mass-number-input" min="1" required>
                     <select id="Mass1Unit">
                         <option value="kg">kg</option>
                         <option value="t">tonnes</option>
@@ -55,7 +55,7 @@
                 </div>
                 <div id="Mass2Div" class=ecw-form-row style="display: none">
                     <label for=Mass2>Mass 2:</label>
-                    <input type="number" id="Mass2" class="ecw-mass-number-input" min="1">
+                    <input type="number" id="Mass2" class="ecw-mass-number-input" min="1" required>
                     <select id="Mass2Unit"> 
                         <option value="kg">kg</option>
                         <option value="t">tonnes</option>
