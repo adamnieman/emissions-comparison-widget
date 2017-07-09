@@ -1,18 +1,22 @@
 
 .ecw-container {
 
-    h2 {
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin: 0 0 10px 0;
+    * {
+        box-sizing: border-box; 
     }
 
-    form {
-        display: block;
+    #volContainer {
+        float: left;
+    }
+
+    #infoContainer {
+        float: left;
         width: 400px;
-        padding: 0;
-        margin: 0;
+        margin-left: 10px;
+    }
+
+    h2 {
+        margin: 0 0 10px 0;
     }
 
     p {
@@ -38,30 +42,30 @@
         background-color: #ddd;
     }
 
+    label {
+        margin-right: 5px;
+    }
+
     select, input {
        border-radius: 0;
-       border: 2px solid #eeeeee;
+       border: 2px solid #eee;
     }
 
-    a {
-        text-decoration: none;
-        color: #f2781f;
+    .ecw-mass-number-input {
+        width: 70px;
     }
 
-    div {
+    .ecw-form-row {
         float: left;
         clear: left;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     #controls {
-        border: 2px solid #eeeeee;
-        width: 400px;
+        border: 2px solid #eee;
+        width: 100%;
         padding: 5px;
-        margin: 0 0 10px 0;
-    }
-
-    .MassInput {
-        padding: none; 
         margin: 0 0 10px 0;
     }
     
@@ -75,26 +79,21 @@
         color: #000000;
     }
 
-    .stats {
-        border: 2px solid #eeeeee;
-        padding: 5px 5px 0 5px;
-        clear: none;
-        width: 187px;
-        margin-bottom: 10px;
-        
-        .stats p {
-            margin-bottom: 5px;
-        }
+    #stats {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 10px;
+        width: 100%;
     }
 
-    #stats {
-
-        width: 420px;
-
-        #stats1 {
-            margin-right: 10px;
+    .ecw-stat-box {
+        border: 2px solid #eee;
+        padding: 5px 5px 0 5px;
+        margin-bottom: 10px;
+        
+        p {
+            margin-bottom: 5px;
         }
-
     }
 
     #buttonContainer {
@@ -105,11 +104,6 @@
         button {
             flex-grow: 1; 
         }
-    }
-
-    #infoContainer {
-        clear: right;
-        margin-left: 10px;
     }
 
 }

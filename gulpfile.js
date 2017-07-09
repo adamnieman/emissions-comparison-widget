@@ -17,6 +17,7 @@ var paths = {
         './src/libs/three.js',
         './src/libs/ColladaLoader.js',
         './src/libs/terrainloader.js',
+        './src/interfaceNodes.js',
         './src/interface.js',
         './src/utility.js',
         './src/modules/setupPage.js',

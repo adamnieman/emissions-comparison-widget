@@ -42,7 +42,7 @@ function outputStats (sb){
 		var dimensions1 = [baseWidth, data.mass1.height, baseWidth]
 			dimensions1 = dimensConverter (dimensions1[0], dimensions1[1], dimensions1[2])
 		
-		statsArray.push(["shape 1", stats1, "h2"])
+        statsArray.push(["Shape 1", stats1, "h2"])
 		statsArray.push(["mass: "+mass1, stats1, "p"])
 		statsArray.push(["volume: "+volume1, stats1, "p"])
 		statsArray.push(["dimensions: "+dimensions1, stats1, "p"])
@@ -62,7 +62,7 @@ function outputStats (sb){
 			dimensions2 = [baseWidth, data.mass2.height, baseWidth]
 			dimensions2 = dimensConverter (dimensions2[0], dimensions2[1], dimensions2[2])
 			
-			statsArray.push(["shape 2", stats2, "h2"])
+            statsArray.push(["Shape 2", stats2, "h2"])
 			statsArray.push(["mass: "+mass2, stats2, "p"])
 			statsArray.push(["volume: "+volume2, stats2, "p"])
 			statsArray.push(["dimensions: "+dimensions2, stats2, "p"])
