@@ -65,6 +65,10 @@ function EmissionsComparisonWidget( config ){
 
     this.initInterface(config);
 
+    window.ecw_sourceRoot = this.getSourceRoot();
+
+    this.help = 'See documentation at ' + window.ecw_sourceRoot + 'docs/';
+
 }
 
 EmissionsComparisonWidget.prototype.initInterface = function( config ){
@@ -84,6 +88,19 @@ EmissionsComparisonWidget.prototype.initInterface = function( config ){
     });
 
 };
+
+EmissionsComparisonWidget.prototype.getSourceRoot = function(){
+    var script,
+        matchPattern = /emissions-comparison-widget\.min\.js$/;
+
+    var scripts = document.getElementsByTagName('script');
+    for(var i in scripts){
+        script = scripts[i];
+        if( script.src.match( matchPattern ) ){
+            return script.src.replace(matchPattern, '' );
+        }
+    }
+}
 
 /**
  * Recursive function that converts nested 
